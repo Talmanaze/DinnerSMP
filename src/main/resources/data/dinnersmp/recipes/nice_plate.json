@@ -1,0 +1,30 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        " WD",
+        "SLP",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "dinnersmp:niceplate"
+        }
+        "W": {
+            "item": "minecraft:wither_star"
+        }
+        "D": {
+            "item": "dinnersmp:finaldrink"
+        }
+        "S": {
+            "item": "minecraft:cooked_steak"
+        }
+        "L": {
+            "item": "minecraft:oak_leaves"
+        }
+        "P": {
+            "item": "minecraft:baked_potato"
+        }
+    }
+
+}

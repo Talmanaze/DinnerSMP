@@ -1,5 +1,8 @@
 package com.karbij.dinnersmp;
 
+import com.karbij.dinnersmp.block.ModBlocks;
+import com.karbij.dinnersmp.item.ModCreativeModTabs;
+import com.karbij.dinnersmp.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
@@ -41,6 +44,12 @@ public class DinnerSMP
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);       
 
@@ -62,7 +71,10 @@ public class DinnerSMP
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(ModItems.FINALMEAL);
+            event.accept(ModItems.FINALDRINK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

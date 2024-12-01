@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:craftin_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "dinnersmp:niceplate"
+        }
+    ],
+    "result": {
+        "item": "dinnersmp:finalmeal",
+        "count": 1
+    }
+}
