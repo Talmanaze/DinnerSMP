@@ -1,10 +1,11 @@
 {
-    "item.dinnersmp.finalmeal": "Final Meal",
+    "item.dinnersmp.finalmeal_block": "Final Meal",
     "item.dinnersmp.finaldrink": "Final Drink",
     "item.dinnersmp.niceplate": "Nice Plate",
     
 
     "block.dinnersmp.teeth_block": "Block of Teeth",
+    "block.dinnersmp.finalmeal_block": "Final Meal",
 
     "creativetab.dinner_tab": "Dinner SMP Tab"
 }

@@ -6,6 +6,7 @@ import com.karbij.dinnersmp.DinnerSMP;
 import com.karbij.dinnersmp.block.custom.FinalMealBlock;
 import com.karbij.dinnersmp.item.ModItems;
 
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -33,7 +34,7 @@ public class ModBlocks {
             return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
         }
 
-        public static final RegistryObject<Block> FINALMEAL_BLOCK = registerBlock("finalmeal_block",
+     public static final RegistryObject<Block> FINALMEAL_BLOCK = BLOCKS.register("finalmeal_block",
         () -> new FinalMealBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
         

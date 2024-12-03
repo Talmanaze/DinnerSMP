@@ -6,6 +6,7 @@ import com.karbij.dinnersmp.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -19,6 +20,10 @@ public class ModBlockStateProvider extends BlockStateProvider{
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.FINALMEAL_BLOCK);
         blockWithItem(ModBlocks.TEETH_BLOCK);
+
+        //simpleBlock(ModBlocks.FINALMEAL_BLOCK.get(), 
+        //    new ModelFile.UncheckedModelFile((modLoc("block/final_meal"))));
+
     }
     
 

@@ -1,10 +1,13 @@
 package com.karbij.dinnersmp;
 
 import com.karbij.dinnersmp.block.ModBlocks;
+import com.karbij.dinnersmp.block.entity.ModBlockEntities;
+import com.karbij.dinnersmp.block.entity.client.FinalMealRenderer;
 import com.karbij.dinnersmp.item.ModCreativeModTabs;
 import com.karbij.dinnersmp.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -29,6 +32,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import software.bernie.geckolib.GeckoLib;
+
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -49,6 +54,9 @@ public class DinnerSMP
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+
+        GeckoLib.initialize();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);       
@@ -72,7 +80,7 @@ public class DinnerSMP
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-            event.accept(ModItems.FINALMEAL);
+            event.accept(ModItems.FINALMEAL_ITEM);
             event.accept(ModItems.FINALDRINK);
         }
     }
@@ -91,7 +99,7 @@ public class DinnerSMP
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            
+            BlockEntityRenderers.register(ModBlockEntities.FINAL_MEAL_ENTITY.get(), FinalMealRenderer::new);
         }
     }
 }

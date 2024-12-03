@@ -15,11 +15,11 @@ public class ModCreativeModTabs {
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DinnerSMP.MODID);
 
     public static final RegistryObject<CreativeModeTab> DINNERSMP_TAB = CREATIVE_MODE_TABS.register("dinner_tab", 
-    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FINALMEAL.get()))
+    () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FINALMEAL_ITEM.get()))
             .title(Component.translatable("creativetab.dinner_tab"))
             .displayItems((pParameters, pOutput) -> {
                 pOutput.accept(ModItems.FINALDRINK.get());
-                pOutput.accept(ModItems.FINALMEAL.get());
+                pOutput.accept(ModItems.FINALMEAL_ITEM.get());
                 pOutput.accept(ModItems.NICEPLATE.get());
                 pOutput.accept(ModBlocks.TEETH_BLOCK.get());
             })
