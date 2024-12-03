@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.finalmeal.activation": {
+		"animation.finalmeal.misc.interact": {
 			"animation_length": 14.7917,
 			"bones": {
 				"TeethL": {
@@ -222,7 +222,7 @@
 			"particle_effects": {},
 			"timeline": {}
 		},
-		"animation.finalmeal.idle": {
+		"animation.finalmeal.misc.idle": {
 			"loop": true,
 			"bones": {
 				"Biter": {
