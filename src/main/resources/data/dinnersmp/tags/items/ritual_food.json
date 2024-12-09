@@ -1,0 +1,48 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cooked_beef",
+    "minecraft:cake",
+    "minecraft:cooked_salmon",
+    {
+      "id":"farmersdelight:grilled_salmon",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:roast_chicken",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:roasted_mutton_chops",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:cooked_lobster_tail",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:roasted_mutton_chops",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:walnut_salad",
+      "required": "false"
+    },
+    {
+      "id":"farmersdelight:pasta_with_meatballs",
+      "required": "false"
+    },
+    {
+      "id":"refurbished_furniture:cooked_vegetable_pizza",
+      "required": "false"
+    },
+    {
+      "id":"mynethersdelight:hot_wings_bucket",
+      "required": "false"
+    },
+    {
+      "id":"mynethersdelight:hot_wings",
+      "required": "false"
+    }
+  ]
+}
