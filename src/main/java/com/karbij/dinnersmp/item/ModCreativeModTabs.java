@@ -11,8 +11,7 @@ import com.karbij.dinnersmp.DinnerSMP;
 import com.karbij.dinnersmp.block.ModBlocks;
 
 public class ModCreativeModTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-        DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DinnerSMP.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DinnerSMP.MODID);
 
     public static final RegistryObject<CreativeModeTab> DINNERSMP_TAB = CREATIVE_MODE_TABS.register("dinner_tab", 
     () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FINALMEAL_ITEM.get()))

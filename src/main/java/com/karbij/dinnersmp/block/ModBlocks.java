@@ -18,11 +18,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS =
-        DeferredRegister.create(ForgeRegistries.BLOCKS, DinnerSMP.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DinnerSMP.MODID);
 
     public static final RegistryObject<Block> TEETH_BLOCK = registerBlock("teeth_block",
-        () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+        () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK)));
 
         private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
             RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -35,7 +34,7 @@ public class ModBlocks {
         }
 
      public static final RegistryObject<Block> FINALMEAL_BLOCK = BLOCKS.register("finalmeal_block",
-        () -> new FinalMealBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+        () -> new FinalMealBlock(BlockBehaviour.Properties.copy(Blocks.REPEATER).noOcclusion()));
 
         
         public static void register(IEventBus eventBus) {

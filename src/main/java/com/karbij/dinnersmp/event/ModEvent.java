@@ -1,4 +1,4 @@
-package com.karbij.dinnersmp.item;
+package com.karbij.dinnersmp.event;
 
-public class event {
+public class ModEvent {
 }

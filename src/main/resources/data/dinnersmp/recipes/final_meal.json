@@ -1,13 +1,19 @@
 {
-    "type": "minecraft:craftin_shapeless",
+    "type": "minecraft:crafting_shapeless",
     "category": "misc",
     "ingredients": [
         {
-            "item": "dinnersmp:niceplate"
+            "tag": "dinnersmp:ritual_food"
+        },
+        {
+            "tag": "dinnersmp:ritual_source"
+        },
+        {
+            "item": "minecraft:honey_bottle"
         }
     ],
     "result": {
-        "item": "dinnersmp:finalmeal",
+        "item": "dinnersmp:finalmeal_block",
         "count": 1
     }
 }

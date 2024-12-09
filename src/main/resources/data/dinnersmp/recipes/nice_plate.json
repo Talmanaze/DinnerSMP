@@ -11,13 +11,13 @@
             "item": "dinnersmp:niceplate"
         },
         "W": {
-            "item": "minecraft:wither_star"
+            "item": "minecraft:nether_star"
         },
         "D": {
             "item": "dinnersmp:finaldrink"
         },
         "S": {
-            "item": "minecraft:cooked_steak"
+            "item": "minecraft:cooked_beef"
         },
         "L": {
             "item": "minecraft:oak_leaves"

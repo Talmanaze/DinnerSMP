@@ -9,6 +9,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +30,8 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -49,14 +52,12 @@ public class DinnerSMP
     {
         IEventBus modEventBus = context.getModEventBus();
 
-        ModCreativeModTabs.register(modEventBus);
+        //ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
-
-        GeckoLib.initialize();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);       
@@ -65,7 +66,7 @@ public class DinnerSMP
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+        //modEventBus.addListener(this::addCreative);
 
         // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -102,4 +103,27 @@ public class DinnerSMP
             BlockEntityRenderers.register(ModBlockEntities.FINAL_MEAL_ENTITY.get(), FinalMealRenderer::new);
         }
     }
+/*
+    private static final String PROTOCOL_VERSION = "1.0";
+	public static SimpleChannel channel = NetworkRegistry.ChannelBuilder
+		.named(resourceLocation("main"))
+		.clientAcceptedVersions(PROTOCOL_VERSION::equals)
+		.serverAcceptedVersions(PROTOCOL_VERSION::equals)
+		.networkProtocolVersion(() -> PROTOCOL_VERSION)
+		.simpleChannel();
+	
+    public static ResourceLocation resourceLocation(String path) {
+        return new ResourceLocation(MODID, path);
+    }
+	@SubscribeEvent
+	public static void setUp(FMLCommonSetupEvent event) {
+		channel.messageBuilder(RitualListMessage.class, 0)
+			.encoder(RitualListMessage::write)
+			.decoder(RitualListMessage::new)
+			.consumerMainThread(RitualListMessage::handle)
+			.add();
+	}
+*/
+    
+    
 }
